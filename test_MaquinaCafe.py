@@ -76,7 +76,7 @@ class CoffeMachineTest(unittest.TestCase):
         self.assertEqual(machine.coffee, 500)
         self.assertEqual(machine.chocolate, 500)
 
-    def test_insert_coffee_second_time(self):
+    def test_insertcoffeesecondtime(self):
         machine = CoffeeMachine()
         machine.insert_coffee(1000)
         machine.insert_coffee(1000)
@@ -88,18 +88,18 @@ class CoffeMachineTest(unittest.TestCase):
         machine.insert_coffee(1000)
         self.assertEqual(machine.coffee, 2000)
 
-    def test_insert_sugar(self):
+    def test_insertsugar(self):
         machine = CoffeeMachine()
         machine.insert_sugar(1000)
         self.assertEqual(machine.sugar, 1000)
 
-    def test_insert_coffee_second_time(self):
+    def test_insertcoffeesecondtime(self):
         machine = CoffeeMachine()
         machine.insert_sugar(1000)
         machine.insert_sugar(1000)
         self.assertEqual(machine.sugar, 2000)
 
-    def test_get_coffee_ok(self):
+    def test_getcoffeeok(self):
         machine = CoffeeMachine()
         machine.insert_coin()
         machine.insert_coin()
@@ -111,7 +111,7 @@ class CoffeMachineTest(unittest.TestCase):
         self.assertEqual(machine.sugar, 1000-5)
         self.assertEqual(machine.coins, 1)
 
-    def test_get_capuchino_ok(self):
+    def test_getcapuchinook(self):
         machine = CoffeeMachine()
         machine.insert_coin()
         machine.insert_coin()
@@ -138,7 +138,7 @@ class CoffeMachineTest(unittest.TestCase):
         self.assertEqual(machine.coins, 1) '''
 
 
-    def test_get_coffee_double_ok(self):
+    def test_getcoffeedoubleok(self):
         machine = CoffeeMachine()
         machine.insert_coin()
         machine.insert_coin()
@@ -151,7 +151,7 @@ class CoffeMachineTest(unittest.TestCase):
         self.assertEqual(machine.coins, 1)
 
 
-    def test_get_coffee_error_no_coffee(self):
+    def test_getcoffeeerrornocoffee(self):
         machine = CoffeeMachine()
         machine.insert_coin()
         machine.insert_coin()
@@ -162,7 +162,7 @@ class CoffeMachineTest(unittest.TestCase):
         self.assertEqual(machine.sugar, 1000)
         self.assertEqual(machine.coins, 2)
 
-    def test_get_coffee_error_no_sugar(self):
+    def test_getcoffeeerrornosugar(self):
         machine = CoffeeMachine()
         machine.insert_coin()
         machine.insert_coin()
@@ -174,7 +174,7 @@ class CoffeMachineTest(unittest.TestCase):
         self.assertEqual(machine.coins, 2)
 
 
-    def test_get_coffee_error_no_coin(self):
+    def test_getcoffeeerrornocoin(self):
         machine = CoffeeMachine()
         machine.insert_coffee(1000)
         machine.insert_sugar(1000)
@@ -193,7 +193,7 @@ class CoffeMachineTest(unittest.TestCase):
             0,
         )
 
-    def test_count_coffee_no_left_because_sugar(self):
+    def test_countcoffeenoleftbecausesugar(self):
         machine = CoffeeMachine()
         machine.insert_coffee(30)
         coffee_left = machine.count_coffee_left()
@@ -211,7 +211,7 @@ class CoffeMachineTest(unittest.TestCase):
             0,
         )
 
-    def test_count_coffee_left_1(self):
+    def test_countcoffeeleft1(self):
         machine = CoffeeMachine()
         machine.insert_coffee(50)
         machine.insert_sugar(5)
@@ -221,7 +221,7 @@ class CoffeMachineTest(unittest.TestCase):
             1,
         )
 
-    def test_count_coffee_left_2(self):
+    def test_countcoffeeleft2(self):
         machine = CoffeeMachine()
         machine.insert_coffee(70)
         machine.insert_sugar(12)
